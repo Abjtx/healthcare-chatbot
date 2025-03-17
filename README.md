@@ -1,6 +1,6 @@
 # Healthcare Symptom Analysis Chatbot
 
-A healthcare chatbot that analyzes symptoms and provides health information using natural language processing and medical APIs.
+Healmate - A healthcare chatbot that analyzes symptoms and provides health information using natural language processing and medical APIs.
 
 ## Features
 
