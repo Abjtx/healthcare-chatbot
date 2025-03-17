@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  rasa:
+    build:
+      context: ./backend/rasa_bot
+      dockerfile: Dockerfile.rasa
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./backend/rasa_bot:/app
+    command: run --enable-api --cors "*" --debug
+    networks:
+      - chatbot-network
+
+  actions:
+    build:
+      context: ./backend/rasa_bot
+      dockerfile: Dockerfile.actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./backend/rasa_bot:/app
+    command: run actions
+    networks:
+      - chatbot-network
+
+  flask-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.flask
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/flask_api:/app
+      - ./frontend:/app/frontend
+    environment:
+      - RASA_API_URL=http://rasa:5005/webhooks/rest/webhook
+    depends_on:
+      - rasa
+      - actions
+    networks:
+      - chatbot-network
+
+networks:
+  chatbot-network:
+    driver: bridge 

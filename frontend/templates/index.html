@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Symptom Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <h1>HEALMATE</h1>
+            </div>
+            <!-- <p class="tagline">Hi! I'm HealthBot. Let's check your symptoms. What are you feeling?</p> -->
+            <!-- <img class="img-med-assistant" src="medical assistant.png" alt="HealthBot Image"> -->
+        </header>
+
+        
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <div class="message-content">
+                        <p>Hi! I'm HealthBot. Let's check your symptoms. What are you feeling?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Describe your symptoms or ask a health question...">
+                <button id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> This chatbot provides general health information and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for medical concerns.</p>
+        </div>
+        
+        <!-- <div class="features">
+            <div class="feature">
+                <i class="fas fa-brain"></i>
+                <h3>AI-Powered Analysis</h3>
+                <p>Advanced natural language processing to understand your symptoms</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-database"></i>
+                <h3>Medical Knowledge</h3>
+                <p>Access to comprehensive medical information</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lock"></i>
+                <h3>Private & Secure</h3>
+                <p>Your health information stays confidential</p>
+            </div>
+        </div> -->
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 HEALMATE. All rights reserved.</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 

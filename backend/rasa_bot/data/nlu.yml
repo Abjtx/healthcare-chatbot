@@ -1,0 +1,158 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hi there
+    - greetings
+    - howdy
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - take care
+    - catch you later
+    - have a nice day
+    - bye bye
+    - talk to you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - ok
+    - okay
+    - right
+    - sounds right
+    - that's right
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - not at all
+    - incorrect
+    - that's wrong
+
+- intent: inform_symptom
+  examples: |
+    - I have a [headache](symptom)
+    - I'm experiencing [fever](symptom)
+    - My [stomach](body_part) hurts
+    - I feel [pain](symptom) in my [chest](body_part)
+    - I've been having [dizziness](symptom) for [two days](duration)
+    - My [throat](body_part) is [sore](symptom)
+    - I have a [cough](symptom) that won't go away
+    - I've been feeling [nauseous](symptom) since [yesterday](duration)
+    - My [back](body_part) has been [aching](symptom) for [a week](duration)
+    - I have [severe](severity) [joint pain](symptom)
+    - I'm having [mild](severity) [difficulty breathing](symptom)
+    - My [skin](body_part) has a [rash](symptom)
+    - I've been [vomiting](symptom) since [this morning](duration)
+    - I have [moderate](severity) [abdominal pain](symptom)
+    - My [eyes](body_part) are [itchy](symptom) and [red](symptom)
+    - I've been experiencing [fatigue](symptom) for [several weeks](duration)
+    - I have a [runny nose](symptom) and [sneezing](symptom)
+    - My [ear](body_part) is [painful](symptom)
+    - I have [high](severity) [blood pressure](symptom)
+    - I've been having [trouble sleeping](symptom)
+    - I feel sick
+    - I don't feel well
+    - I'm not feeling good
+    - I'm sick
+    - I have been sick for [3 days](duration)
+    - My [head](body_part) hurts
+    - I have a [bad](severity) [headache](symptom)
+    - I have a [mild](severity) [fever](symptom)
+    - I've had a [cough](symptom) for [a few days](duration)
+    - I'm feeling [dizzy](symptom)
+    - I have [stomach pain](symptom)
+    - My [joints](body_part) are [aching](symptom)
+    - I have [chest tightness](symptom)
+    - I'm having [trouble breathing](symptom)
+    - I have a [sore throat](symptom)
+    - I've been [coughing](symptom) a lot
+    - I have [pain](symptom) when I [swallow](body_part)
+    - I have [pain](symptom) in my [lower back](body_part)
+    - My [shoulder](body_part) feels stiff and [painful](symptom)
+    - I’ve been [sweating](symptom) excessively since [last night](duration)
+    - My [ankle](body_part) is [swollen](symptom)
+    - I have [burning](symptom) pain in my [chest](body_part)
+    - My [knees](body_part) are [sore](symptom) and [swollen](symptom)
+    - I feel [extremely tired](symptom) all the time
+    - My [legs](body_part) feel weak
+    - I have [shortness of breath](symptom) after walking for [5 minutes](duration)
+
+- intent: ask_health_info
+  examples: |
+    - What could cause [headaches](symptom)?
+    - Is [fever](symptom) serious?
+    - Should I be worried about [chest pain](symptom)?
+    - What are common causes of [dizziness](symptom)?
+    - When should I see a doctor for [cough](symptom)?
+    - How can I treat [sore throat](symptom) at home?
+    - What does [abdominal pain](symptom) indicate?
+    - Are [rashes](symptom) contagious?
+    - What helps with [joint pain](symptom)?
+    - How long does [fever](symptom) typically last?
+    - What are symptoms of [flu](symptom)?
+    - Is [shortness of breath](symptom) an emergency?
+    - What causes [nausea](symptom)?
+    - How to reduce [high blood pressure](symptom)?
+    - What are signs of [dehydration](symptom)?
+    - Tell me about [headaches](symptom)
+    - What should I know about [fever](symptom)
+    - Information on [cough](symptom)
+    - Help me understand [chest pain](symptom)
+    - What can you tell me about [sore throat](symptom)
+    - I want to know more about [dizziness](symptom)
+    - Give me information on [abdominal pain](symptom)
+    - What are the causes of [back pain](symptom)
+    - How serious is [fatigue](symptom)
+
+- intent: ask_for_help
+  examples: |
+    - Can you help me?
+    - I need assistance
+    - What can you do?
+    - How does this work?
+    - What should I tell you?
+    - How can you help me?
+    - What information do you need?
+    - I'm not sure what to do
+    - Help me understand how to use this
+    - What kind of medical advice can you provide?
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What's the weather like?
+    - Tell me a joke
+    - Who is the president?
+    - Can you book a flight for me?
+    - What's your favorite color?
+    - Do you like music?
+    - How old are you?
+    - Are you a human?
+    - Can you help me with my homework? 
